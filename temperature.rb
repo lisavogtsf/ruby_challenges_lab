@@ -12,13 +12,17 @@
 def converter(choice, orig_temp)
     if (choice == 1)
         # celsius to fahrenheit
-        converted = orig_temp * (180/100) + 32
-        return converted + " degrees Fahrenheit"
+        puts "original temperature = #{orig_temp} degrees Celsius"
+        converted = (orig_temp.to_f * (9.0/5.0)) + 32
+        puts "#{converted} degrees Fahrenheit"
+        return converted
     else
         # fahrenheit to celsius
-        converted = (orig_temp - 32) *(100/180)
-        return converted + " degrees Celsius"
+        puts "original temperature = #{orig_temp} degrees Fahrenheit"
+        converted = (orig_temp - 32.0) *(5.0/9.0)
+        puts "#{converted} degrees Celsius"
+        return converted
     end
 end
 
-converter(1, 30)
+converter(2, 32)
